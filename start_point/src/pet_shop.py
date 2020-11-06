@@ -40,8 +40,10 @@ def find_pet_by_name( pet_shop, pet_name ):
             pet_by_name = pet
             return pet_by_name
 
-def remove_pet_by_name( pet_shop, pet_name):
+def remove_pet_by_name( pet_shop, pet_name ):
     pet_exists = find_pet_by_name( pet_shop, pet_name )
     if pet_exists != None:
         pet_shop["pets"].remove(pet_exists)
 
+def add_pet_to_stock( pet_shop, new_pet ):
+    pet_shop["pets"].append(new_pet)
