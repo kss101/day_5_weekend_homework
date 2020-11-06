@@ -39,3 +39,9 @@ def find_pet_by_name( pet_shop, pet_name ):
         if pet.get("name") == pet_name:
             pet_by_name = pet
             return pet_by_name
+
+def remove_pet_by_name( pet_shop, pet_name):
+    pet_exists = find_pet_by_name( pet_shop, pet_name )
+    if pet_exists != None:
+        pet_shop["pets"].remove(pet_exists)
+
