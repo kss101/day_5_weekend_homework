@@ -9,10 +9,15 @@ def get_total_cash( pet_shop ):
     return total_cash
 
 def add_or_remove_cash( pet_shop, cash_amount ):
-    current_total_cash = get_total_cash( pet_shop )
-    new_total_cash = current_total_cash + cash_amount
-    pet_shop["admin"]["total_cash"] = new_total_cash
+    current_cash_total = get_total_cash( pet_shop )
+    new_cash_total = current_cash_total + cash_amount
+    pet_shop["admin"]["total_cash"] = new_cash_total
 
 def get_pets_sold( pet_shop ):
-    pets_sold = pet_shop["admin"]["pets_sold"]
-    return pets_sold
+    total_pets_sold = pet_shop["admin"]["pets_sold"]
+    return total_pets_sold
+
+def increase_pets_sold( pet_shop, num_pets_sold):
+    current_pet_total = get_pets_sold( pet_shop )
+    new_pet_total = current_pet_total + num_pets_sold
+    pet_shop["admin"]["pets_sold"] = new_pet_total
