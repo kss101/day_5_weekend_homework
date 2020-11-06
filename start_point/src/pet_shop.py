@@ -38,4 +38,4 @@ def find_pet_by_name( pet_shop, pet_name ):
     for pet in pet_shop["pets"]:
         if pet.get("name") == pet_name:
             pet_by_name = pet
-    return pet_by_name
+            return pet_by_name
