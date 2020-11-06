@@ -13,3 +13,6 @@ def add_or_remove_cash( pet_shop, cash_amount ):
     new_total_cash = current_total_cash + cash_amount
     pet_shop["admin"]["total_cash"] = new_total_cash
 
+def get_pets_sold( pet_shop ):
+    pets_sold = pet_shop["admin"]["pets_sold"]
+    return pets_sold
